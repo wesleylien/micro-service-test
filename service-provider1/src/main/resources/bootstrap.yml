@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: service-provider-v1
+  profiles:
+    active: dev   # 使用的环境配置，这里如果 fail-fast: true，则读取失败的情况下，默认读取 *-dev.yml 文件
+  cloud:
+    config:
+      fail-fast: true                     # 失败快速响应
+#      uri: http://localhost:8701          # config server 采用本地文件系统时通过 url 访问 config server
+      profile: dev                        # 对应配置文件规则的 {profile} 部分
+      label: master                       # 对应配置文件规则的 {label} 部分（分支）
+      discovery:                      # 如果使用 eureka server 发现 config server，需进行设置
+        enabled: true                 # ture 开启通过服务来访问 config server
+        service-id: config-server     # 指定 config server 注册服务名
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: guest
+#    password: guest
+# 如果使用 eureka server 发现 config server，再获取配置文件信息。则需要先连接到 eureka server，因此需指定 eureka server 信息，此外可以先指定 port 信息，不然默认为 8888(http 连接)，如果从 config server 上获取的 port 有改动，则最后在 eureka server 上注册以及暴露出的 port 为 config server 上获取的 port
+server:
+  port: 8710
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8700/eureka/      # eureka server url

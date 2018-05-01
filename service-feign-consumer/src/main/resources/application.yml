@@ -1,0 +1,6 @@
+management:
+  security:
+    enabled: false
+feign:                            # feign 开启 hystrix
+  hystrix:
+    enabled: true

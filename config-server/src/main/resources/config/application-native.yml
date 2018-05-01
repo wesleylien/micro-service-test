@@ -1,0 +1,18 @@
+server:
+  port: 8701      # 端口
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8700/eureka/      # eureka server url
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/remote_config          # 本地文件系统的存储位置
+      label: master                                           # 分支名，config client 亦可自己决定分支
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest

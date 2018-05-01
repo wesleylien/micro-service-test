@@ -1,0 +1,8 @@
+server:
+  port: 8720      # 端口
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest

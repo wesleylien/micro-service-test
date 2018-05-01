@@ -1,0 +1,36 @@
+turbine:
+  stream:
+    port: 8703
+spring:
+  application:
+    name: turbine-server
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8700/eureka/      # eureka server url
+#  security:
+#    enabled: false
+#turbine:                                              # turbine server 配置相关
+#  aggregator:
+#    clusterConfig: default   # 指定聚合哪些集群，多个使用","分割，默认为default。可使用http://.../turbine.stream?cluster={clusterConfig之一}访问
+##  app-config: service-feign-consumer-v1               # 指定要收集监控的服务名
+##  cluster-name-expression: new String("default")                  # 指定集群名称
+#  combine-host-port: true                             # true 可让同一主机的服务通过主机名和端口号的组合来区分（默认以 host 来区分）
+
+#management:
+#  port: -1
+#spring:
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: guest
+#    password: guest
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8700/eureka/      # eureka server url

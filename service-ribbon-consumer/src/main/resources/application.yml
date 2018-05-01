@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: service-ribbon-consumer-v1
+  profiles:
+    active: dev   # 使用的环境配置
