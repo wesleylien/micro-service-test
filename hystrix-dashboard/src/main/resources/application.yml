@@ -1,11 +1,6 @@
 spring:
-  application:
-    name: hystrix-dashboard
   profiles:
     active: dev   # 使用的环境配置
-server:
-  port: 8702      # 端口
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8700/eureka/      # eureka server url
+management:
+  security:
+    enabled: false

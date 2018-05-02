@@ -25,18 +25,18 @@
 		</dependency> -->
 		<!-- turbine mq rabbitmq -->
 		<!-- 注意：spring-cloud-starter-turbine-amqp 与 spring-cloud-starter-turbine 不能共存，两者依赖的 turbine-core 版本也不同 -->
-		<!-- <dependency>
+		<dependency>
 		    <groupId>org.springframework.cloud</groupId>
 		    <artifactId>spring-cloud-starter-turbine-amqp</artifactId>
-		</dependency> -->
-		<dependency>
+		</dependency>
+		<!-- <dependency>
 		    <groupId>org.springframework.cloud</groupId>
 		    <artifactId>spring-cloud-starter-turbine-stream</artifactId>
 		</dependency>
 		<dependency>
 		    <groupId>org.springframework.cloud</groupId>
 		    <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
-		</dependency>
+		</dependency> -->
 	</dependencies>
 	<build>
 		<plugins>

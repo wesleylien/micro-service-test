@@ -1,8 +1,13 @@
 server:
   port: 8720      # 端口
 spring:
-  rabbitmq:
+  rabbitmq:           # rabbit mq 配置，for config server refresh and turbine stream
     host: localhost
     port: 5672
     username: guest
     password: guest
+  sleuth:
+    sampler:
+      percentage: 1.0
+  zipkin:
+    base-url: http://localhost:8705

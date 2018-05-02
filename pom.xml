@@ -80,6 +80,8 @@
 		<module>config-server</module>
 		<module>turbine-server</module>
 		<module>hystrix-dashboard</module>
+		<module>zipkin-server</module>
+		<module>gateway-server</module>
 		<module>service-provider1</module>
 		<module>service-feign-consumer</module>
 		<module>service-ribbon-consumer</module>

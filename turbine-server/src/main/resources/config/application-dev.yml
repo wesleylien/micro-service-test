@@ -1,12 +1,24 @@
 management:
-  port: 8990
-#spring:
-#  rabbitmq:
-#    host: localhost
-#    port: 5672
-#    username: guest
-#    password: guest
-#eureka:
-#  client:
-#    service-url:
-#      defaultZone: http://localhost:8700/eureka/      # eureka server url
+  port: 8990                  # 配置Spring Boot Actuator的端口  
+server:
+  port: 8703      # 端口
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8700/eureka/      # eureka server url
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+turbine:                                              # turbine server 配置相关
+  stream:
+    port: 8704                                        # 不指明会报错 https://github.com/spring-cloud/spring-cloud-netflix/issues/742 http://itmuch.com/spring-cloud-sum/turbine-stream-cannot-register-into-eureka-server/ 
+  aggregator:
+    clusterConfig: default   # 指定聚合哪些集群，多个使用","分割，默认为default。可使用http://.../turbine.stream?cluster={clusterConfig之一}访问
+#  app-config: service-feign-consumer-v1               # 指定要收集监控的服务名
+#  cluster-name-expression: new String("default")                  # 指定集群名称
+  combine-host-port: true                             # true 可让同一主机的服务通过主机名和端口号的组合来区分（默认以 host 来区分）

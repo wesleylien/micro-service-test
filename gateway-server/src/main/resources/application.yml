@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: module-model
+  profiles:
+    active: dev   # 使用的环境配置

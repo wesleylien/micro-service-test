@@ -1,5 +1,3 @@
 spring:
   application:
     name: config-server
-  profiles:
-    active: native   # 使用的环境配置，如果使用本地文件系统，必须设置为 native

@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    active: dev   # 使用的环境配置
+management:
+  security:
+    enabled: false

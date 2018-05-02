@@ -1,1 +1,8 @@
-
+server:
+  port: 8702      # 端口
+eureka:
+  instance:
+    hostname: localhost     # host
+  client:
+    service-url:
+      defaultZone: http://localhost:8700/eureka/      # eureka server url
